@@ -1023,7 +1023,7 @@
  *   Options: [disable: 0, enable: 1]
  */
 #define START_GCODE_ENABLED  1  // Default: 0
-#define END_GCODE_ENABLED    0  // Default: 0
+#define END_GCODE_ENABLED    1  // Default: 0
 #define CANCEL_GCODE_ENABLED 1  // Default: 0
 
 /**
@@ -1033,9 +1033,9 @@
  * CANCEL_GCODE will run when a print is cancelled if "CANCEL_GCODE_ENABLED" is enabled.
  *   Value range: [min: 3, max: 75 characters]
  */
-#define START_GCODE  "G34\n"
-#define END_GCODE    "M104 S0\nM140 S0\nM107\nM18\nM81 S\n"
-#define CANCEL_GCODE "M104 S0\nM140 S0\nG28 XY R10\nM107\nM18\n"
+#define START_GCODE  "M75\n"
+#define END_GCODE    "M104 S0\nM140 S0\nM77\nM107\nM18\nM81 S\n"
+#define CANCEL_GCODE "M104 S0\nM140 S0\nG1 X0 Y200 F3600\nM77\nM107\nM18\n"
 
 //====================================================================================================
 //============================ Settings Configurable At Compile Time Only ============================
