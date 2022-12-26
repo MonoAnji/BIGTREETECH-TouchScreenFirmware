@@ -211,14 +211,14 @@
  * Show persistent temperature info in all menus.
  *   Options: [disable: 0, enable: 1]
  */
-#define PERSISTENT_INFO 0  // Default: 0
+#define PERSISTENT_INFO 1  // Default: 0
 
 /**
  * Temperature And Wait ACK In Terminal
  * Show "temperature" and "wait" ACK in Terminal menu.
  *   Options: [disable: 0, enable: 1]
  */
-#define TERMINAL_ACK 1  // Default: 0
+#define TERMINAL_ACK 0  // Default: 0
 
 /**
  * Notification M117
@@ -544,7 +544,7 @@
  * Keep polling M27 even if not printing (e.g. SD print not started from TFT).
  *   Options: [disable: 0, enable: 1]
  */
-#define M27_ALWAYS_ACTIVE 1  // Default: 1
+#define M27_ALWAYS_ACTIVE 0  // Default: 1
 
 /**
  * Long File Names Support
