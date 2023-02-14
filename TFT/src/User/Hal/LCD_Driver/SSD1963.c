@@ -62,7 +62,7 @@
     LCD_WR_REG(0xBC);   // postprocessor for contrast/brightness/saturation.
     LCD_WR_DATA(0x34);  // Contrast value (0-127). Set to 52 to reduce banding/flickering.
     LCD_WR_DATA(0x77);  // Brightness value (0-127). Set to 119 to reduce banding/flickering.
-    LCD_WR_DATA(0x48);  // Saturation value (0-127).
+    LCD_WR_DATA(0x64);  // Saturation value (0-127).
     LCD_WR_DATA(0x01);  // Enable/disable the postprocessor for contrast/brightness/saturation (1-0).
     LCD_WR_REG(0x29);   // Set display on
 
