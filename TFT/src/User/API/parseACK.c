@@ -1360,7 +1360,7 @@ void parseACK(void)
     #ifdef SERIAL_PORT_2
       if (ack_port_index == PORT_1)
       {
-        if (infoHost.wait == false && !ack_starts_with("ok"))
+        if ((infoHost.wait == false && !ack_starts_with("ok")) || ack_starts_with("T:") || ack_starts_with("X:"))
         { // if the ACK message is not related to a gcode originated by the TFT and it is not "ok", it is a spontaneous
           // ACK message so pass it to all the supplementary serial ports (since these messages came unrequested)
           Serial_Forward(SUP_PORTS, ack_cache);
